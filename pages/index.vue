@@ -16,7 +16,15 @@
     </div>
     <div class="mainArea">
   
-      <div class="LHSNav">LHS Nav</div>
+      <div class="LHSNav">
+        <div>I would like to:</div>
+       
+      <tree
+      :data="treeData"
+    />
+
+      </div>
+
       <div class="workArea">
         <div class="workAreaContent">
           <h1>Welcome LUCAS</h1>
@@ -72,14 +80,28 @@
 
 <script>
   import MyTalFooter from '~/components/MyTalFooter.vue'
-  
-  
+
+
+
+
   export default {
     components: {
       MyTalFooter
     },
     data: function() {
       return {
+    treeData: [
+            { text: 'Item 1' },
+            { text: 'Item 2', state: { expanded: true }, children: [
+            	{ text: 'Item 2.1' },
+              { text: 'Item 2.2' },
+              { text: 'Item 2.3' }
+            ]},
+            { text: 'Item 3', state: { selected: true } },
+            { text: 'Item 4' }
+          ],
+          treeOptions: {
+          },
         Cards: {
           Card1: {
             id: 1,
@@ -115,11 +137,27 @@
           },
         }
       }
+    },
+    methods:{
+            
     }
+    
   }
+
+
+
+
+
 </script>
 
 <style>
+
+.TreeNavigation li {
+    padding-left: 20px !important;
+    color:white !important;
+}
+
+
 .margin-top-30px{
   padding-top:30px
 }
