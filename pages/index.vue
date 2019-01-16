@@ -17,11 +17,9 @@
     <div class="mainArea">
   
       <div class="LHSNav">
-        <div>I would like to:</div>
        
-      <tree
-      :data="treeData"
-    />
+       
+      <myTALNav></myTALNav>
 
       </div>
 
@@ -80,28 +78,18 @@
 
 <script>
   import MyTalFooter from '~/components/MyTalFooter.vue'
-
+  import myTALNav from '~/components/myTAL-Nav.vue'
 
 
 
   export default {
     components: {
-      MyTalFooter
+      MyTalFooter,
+      myTALNav
     },
     data: function() {
       return {
-    treeData: [
-            { text: 'Item 1' },
-            { text: 'Item 2', state: { expanded: true }, children: [
-            	{ text: 'Item 2.1' },
-              { text: 'Item 2.2' },
-              { text: 'Item 2.3' }
-            ]},
-            { text: 'Item 3', state: { selected: true } },
-            { text: 'Item 4' }
-          ],
-          treeOptions: {
-          },
+
         Cards: {
           Card1: {
             id: 1,
