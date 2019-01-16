@@ -1,28 +1,26 @@
 <template>
-
     <div>
         <div class="StartNavText">I would like to: </div>
     
         <div class="example-tree">
             <tree :data="menuData">
                 <span class="tree-text" slot-scope="{ node }">
-            
-    
-    <template>
-        <div>
-        <a class="Navigation" :href="node.data.link"> 
-          <div class="icon-menu">  <img  :src="node.data.icon" alt=""> </div>
-    <!--    <i :class="node.data.icon"></i> -->
-       <div class="navText" >{{ node.text }}</div> 
-        </a>
-        </div>
-</template>
+                
+        
+        <template>
+            <div>
+            <a class="Navigation" :href="node.data.link"> 
+              <div class="icon-menu">  <img  :src="node.data.icon" alt=""> </div>
+           <div class="navText" >{{ node.text }}</div> 
+            </a>
+            </div>
+    </template>
             </span>
           </tree>
         </div>
 
   </div>
-</div>
+
 
 </template>
 
@@ -42,14 +40,14 @@
                                 text: '- Accelerated Protection - 1665317',
                                 data: {
                                     icon: '',
-                                    link: '/index.html'
+                                    link: 'Testpage'
                                 }
                             },
                             {
                                 text: '- Accelerated Protection - 1666140',
                                 data: {
                                     icon: '',
-                                    link: '/index.html'
+                                    link: 'Testpage'
                                 }
                             },
                         ]
@@ -59,7 +57,7 @@
                         text: 'Request a Statement',
                         data: {
                             icon: '/request-statement.svg',
-                            link: '/index.html'
+                            link: 'Testpage'
                         }
     
                     },
@@ -67,7 +65,7 @@
                         text: 'Request a Certificate of Currency',
                         data: {
                             icon: '/request-CC.svg',
-                            link: '/index.html'
+                            link: 'Testpage'
                         }
     
                     },
@@ -75,7 +73,7 @@
                         text: 'Add Policy',
                         data: {
                             icon: '/add-policy.svg',
-                            link: '/index.html'
+                            link: 'Testpage'
                         }
     
                     },
@@ -83,7 +81,7 @@
                         text: 'Change Password',
                         data: {
                             icon: '/change-password.svg',
-                            link: '/index.html'
+                            link: 'Testpage'
                         }
     
                     },
@@ -91,7 +89,7 @@
                         text: 'Overdue payments',
                         data: {
                             icon: '/overdue-payments.svg',
-                            link: '/index.html'
+                            link: 'Testpage'
                         }
     
                     },
@@ -99,7 +97,7 @@
                         text: '- Accelerated Protection - 1666140',
                         data: {
                             icon: '',
-                            link: '/index.html'
+                            link: 'Testpage'
                         }
     
                     }
@@ -111,65 +109,61 @@
 </script>
 
 <style>
-
-.StartNavText{
-    color: #fff;
-    font-size: 15px;
-    font-size: .9375rem;
-    margin-bottom: 25px;
-    margin-top: 20px;
-    line-height: 1.33;
-    letter-spacing: inherit;
-    font-weight: 700;
-}
-
-.Navigation{
-    color:white;
-    font-size: .8125rem;
-    line-height: 1.1538461538;
-    font-weight: 500;
-    transition-duration: 250ms;
-}
-
-.example-tree{
-    margin-left: -43px;
-    max-width: 270px !important;
-}
-
-.navText{
-      margin-left:30px;
-    white-space:normal;
-      
-}
-
-.navText:hover{
-      margin-left:30px;
-    white-space:normal;
-    color: #80C342;
-      
-}
-
-.icon-menu{
-        float: left
-}
-
-.tree-children .tree-node .tree-content .tree-anchor {
-     border-top: 1px solid transparent !important;
-     margin-left:-20px;
-}
-
-.tree-root .tree-node .tree-content .tree-anchor{
-     border-top: 1px solid rgba(255,255,255,0.1);
-      padding-top: 17px;
-      margin-bottom: 5px;
-      white-space:normal;
-}
-
-.tree-node {
-    white-space:normal;
-       
-  
+    .StartNavText {
+        color: #fff;
+        font-size: 15px;
+        font-size: .9375rem;
+        margin-bottom: 25px;
+        margin-top: 20px;
+        line-height: 1.33;
+        letter-spacing: inherit;
+        font-weight: 700;
     }
+    
+    .Navigation {
+        color: white;
+        font-size: .8125rem;
+        line-height: 1.1538461538;
+        font-weight: 500;
+        transition-duration: 250ms;
+    }
+    
+    .example-tree {
+        margin-left: -43px;
+        max-width: 270px !important;
+    }
+    
+    .navText {
+        margin-left: 30px;
+        white-space: normal;
+    }
+    
+    .navText:hover {
+        margin-left: 30px;
+        white-space: normal;
+        color: #80C342;
+    }
+    
+    .icon-menu {
+        float: left
+    }
+    
+    .tree-children .tree-node .tree-content .tree-anchor {
+        border-top: 1px solid transparent !important;
+        margin-left: -20px;
+    }
+    
+    .tree-root .tree-node .tree-content .tree-anchor {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 17px;
+        margin-bottom: 5px;
+        white-space: normal;
+    }
+    
+    .tree-node {
+        white-space: normal;
+    }
+    
     .tree-arrow.has-child:after {
         border: 1px solid white;
         /* position: absolute; */
@@ -193,7 +187,6 @@
         top: 50%;
         height: 9px;
         width: 9px;
- 
         transform: rotateZ(225deg);
         transform-origin: center;
         margin-top: 3px;
@@ -210,12 +203,12 @@
     .l-fade-enter-active,
     .l-fade-leave-active {
         transition: opacity .3s, transform .3s;
-       transform: translateY(0);
+        transform: translateY(0);
     }
     
     .l-fade-enter,
     .l-fade-leave-to {
         opacity: 0;
-       transform: translateY(-0.5em);
+        transform: translateY(-0.5em);
     }
 </style>
