@@ -122,11 +122,10 @@
             ActionButton: "btn-primary-outline"
   
           }
-      },
-    methods: {
+      }
   
+  }
     }
-  
   }
 </script>
 
