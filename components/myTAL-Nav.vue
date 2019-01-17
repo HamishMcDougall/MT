@@ -80,13 +80,7 @@
                                     link: 'Testpage'
                                 }
                             },
-                            {
-                                text: '- Smart Wealth - 1666140',
-                                data: {
-                                    icon: '',
-                                    link: 'Testpage'
-                                }
-                            },
+                           
                         ]
                     },
     
@@ -182,6 +176,10 @@
        background-color: #35434b !important;
        margin-left:33px !important;
        margin-top:-3px !important;
+    }
+
+    .tree > .tree-root{
+         margin-right: 27px;
     }
     
     .tree-root .tree-node .tree-content .tree-anchor {
