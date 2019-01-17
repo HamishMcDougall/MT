@@ -47,7 +47,7 @@
 
 
   
-            <div v-for="CardData in CardsInsurance" :key="CardData.id">
+            <div v-for="CardData in CardPolicyInsurance" :key="CardData.id">
               <div class="MyTALCard">
                 <h2>{{CardData.Type}}</h2>
                 <div v-for="(PolicyData, PolicyLabel) in CardData.policyData" :key="PolicyData.Policy">
@@ -122,8 +122,7 @@
             ActionButton: "btn-primary-outline"
   
           }
-      }
-    },
+      },
     methods: {
   
     }
