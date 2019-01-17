@@ -1,0 +1,80 @@
+.btn-primary {
+    padding: 12px 20px 8px;
+    border-radius: 3px;
+    border: 1px solid #80C342;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #232d32;
+    background-color: #80C342;
+    font-weight: 700;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-size: .75rem;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background: #c1e2a3;
+    border-color: #c1e2a3;
+    color: #232d32;
+}
+
+.btn-primary-outline {
+    background-color: transparent;
+    border-color: #80C342;
+    color: #232d32;
+    padding: 12px;
+    border-radius: 3px;
+    border: 1px solid #80C342;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .75rem;
+    flex-shrink: 0;
+    display: inline-block;
+}
+
+.btn-primary-outline:hover {
+    border-color: #c1e2a3;
+    color: #232d32;
+}
+
+.btn-primary-danger {
+    background-color: #e50404;
+    border-color: #e50404;
+    color: #fff;
+    padding: 12px;
+    display: inline-block;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .75rem;
+    flex-shrink: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #232d32;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.LogOutButton {
+    margin-right: 50px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(123, 123, 123);
+    border-image: initial;
+    padding: 0px 10px;
+    background: transparent;
+    color: white;
+    text-transform: uppercase;
+    line-height: 24px;
+    margin-top: 7px;
+    font-weight: 700;
+  }
+  
+  .LogOutButton:hover {
+    border-color: #80C342;
+    color: #80C342;
+  }

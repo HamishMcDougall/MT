@@ -77,7 +77,7 @@
                                 text: '- Smart Wealth - 1665317',
                                 data: {
                                     icon: '',
-                                    link: 'Testpage'
+                                    link: 'bondPolicyDetails'
                                 }
                             },
                            

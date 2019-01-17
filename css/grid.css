@@ -1,0 +1,47 @@
+
+  .Grid {
+    display: grid;
+    grid-template-rows: 39px 85px 0px auto 235px;
+    min-height: 100vh;
+  }
+  
+  .topBar {
+    background-color: rgb(34, 34, 34);
+    color: rgb(255, 255, 255);
+    padding-left: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    font-size: .625rem;
+  }
+  
+  .navigationDesktop {
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(232, 232, 232);
+    padding-left: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .navigationMobile {
+    visibility: hidden;
+  }
+  
+  .mainArea {
+    display: grid;
+    grid-template-columns: 330px 1fr;
+  }
+  
+  .workArea {
+   /* background-image: url(/bg-cliff.jpg);*/
+   background-color: rgb(235, 235, 235);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+  }
+  
+  .workAreaContent {
+    max-width: 1100px;
+    padding: 60px;
+  }

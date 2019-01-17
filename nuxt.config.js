@@ -28,6 +28,8 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    '~/css/TALbuttons.css',
+    '~/css/grid.css'
   ],
 
   /*
