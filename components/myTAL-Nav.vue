@@ -1,16 +1,12 @@
 <template>
     <div>
-        <div class="StartNavText">I would like to: </div>
-    
         <div class="example-tree">
             <tree :data="menuData">
                 <span class="tree-text" slot-scope="{ node }">
-                
-        
         <template>
             <div>
             <a class="Navigation" :href="node.data.link"> 
-              <div class="icon-menu">  <img  :src="node.data.icon" alt=""> </div>
+              <div class="icon-menu">  <img  :src="node.data.icon" alt="" width="18px"> </div>
            <div class="navText" >{{ node.text }}</div> 
             </a>
             </div>
@@ -28,10 +24,11 @@
     export default {
         data: function() {
             return {
-                menuData: [{
-                        text: 'View Policy Details',
+                menuData: [
+                     {
+                        text: 'Accelerated Protection',
                         data: {
-                            icon: '/view-policy-details.svg',
+                            icon: 'Life-white-4.svg',
                         },
                         state: {
                             expanded: false
@@ -50,13 +47,11 @@
                                     link: 'Testpage'
                                 }
                             },
-                        ]
-                    },
-    
+
                     {
                         text: 'Request a Statement',
                         data: {
-                            icon: '/request-statement.svg',
+                            icon: '.request-statement-0.svg',
                             link: 'Testpage'
                         }
     
@@ -64,43 +59,65 @@
                     {
                         text: 'Request a Certificate of Currency',
                         data: {
-                            icon: '/request-CC.svg',
+                            icon: '.request-CC-0.svg',
                             link: 'Testpage'
                         }
     
                     },
-                    {
-                        text: 'Add Policy',
+                        ]
+                    },{
+                        text: 'Smart Wealth',
                         data: {
-                            icon: '/add-policy.svg',
-                            link: 'Testpage'
-                        }
-    
+                            icon: 'SWealth-white-04.svg',
+                        },
+                        state: {
+                            expanded: false
+                        },
+                        children: [{
+                                text: '- Smart Wealth - 1665317',
+                                data: {
+                                    icon: '',
+                                    link: 'Testpage'
+                                }
+                            },
+                            {
+                                text: '- Smart Wealth - 1666140',
+                                data: {
+                                    icon: '',
+                                    link: 'Testpage'
+                                }
+                            },
+                        ]
                     },
-                    {
-                        text: 'Change Password',
-                        data: {
-                            icon: '/change-password.svg',
-                            link: 'Testpage'
-                        }
     
-                    },
+              
+                    
                     {
                         text: 'Overdue payments',
                         data: {
-                            icon: '/overdue-payments.svg',
+                            icon: '/overdue-payments-0.svg',
                             link: 'Testpage'
                         }
     
                     },
-                    {
-                        text: '- Accelerated Protection - 1666140',
+                     {
+                        text: 'Add Policy / Investment',
                         data: {
-                            icon: '',
+                            icon: '/add-policy-0.svg',
                             link: 'Testpage'
                         }
     
-                    }
+                    },
+                   
+                
+                    {
+                        text: 'Change Password',
+                        data: {
+                            icon: '/change-password-0.svg',
+                            link: 'Testpage'
+                        }
+    
+                    },
                 ]
     
             }
@@ -109,6 +126,11 @@
 </script>
 
 <style>
+
+
+
+
+
     .StartNavText {
         color: #fff;
         font-size: 15px;
@@ -136,6 +158,7 @@
     .navText {
         margin-left: 30px;
         white-space: normal;
+         transition-duration: 250ms;
     }
     
     .navText:hover {
@@ -149,14 +172,22 @@
     }
     
     .tree-children .tree-node .tree-content .tree-anchor {
-        border-top: 1px solid transparent !important;
-        margin-left: -20px;
+        border-bottom: 1px solid transparent !important;
+        margin-left: -50px;
+      
+    }
+
+
+    .tree-children  .tree-node {
+       background-color: #35434b;
+       margin-left:33px;
+       margin-top:-3px;
     }
     
     .tree-root .tree-node .tree-content .tree-anchor {
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        padding-top: 17px;
-        margin-bottom: 5px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 10px;
+        padding-bottom: 10px;
         white-space: normal;
     }
     
@@ -169,13 +200,13 @@
         /* position: absolute; */
         border-left: 0;
         border-top: 0;
-        left: 229px;
+        left: 235px;
         top: 50%;
         height: 9px;
         width: 9px;
         transform: rotateZ(45deg);
         transform-origin: center;
-        margin-top: -3px;
+        margin-top: -8px;
     }
     
     .tree-arrow.expanded.has-child:after {
@@ -183,13 +214,13 @@
         /* position: absolute; */
         border-left: 0;
         border-top: 0;
-        left: 229px;
+        left: 235px;
         top: 50%;
         height: 9px;
         width: 9px;
         transform: rotateZ(225deg);
         transform-origin: center;
-        margin-top: 3px;
+        margin-top: -8px;
     }
     
     .tree-node.selected>.tree-content {
@@ -209,6 +240,6 @@
     .l-fade-enter,
     .l-fade-leave-to {
         opacity: 0;
-        transform: translateY(-0.5em);
+        transform: translateY(-0.1em);
     }
 </style>

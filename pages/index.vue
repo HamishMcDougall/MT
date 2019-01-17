@@ -7,30 +7,43 @@
         <div class="LogOutButton"> LOG OUT </div>
       </a>
     </div>
-    <div class="navigation">
+    <div class="navigationDesktop">
       <div><img src="~/assets/logo-primary.svg" alt="TAL"></div>
       <div class="myTALtext">myTAL</div>
       <a href="#">
         <div class="link helpBtn">Help</div>
       </a>
     </div>
+  
+  
+    <div class="navigationMobile">
+      <div class="btn-primary-outline">Menu</div>
+  
+      <div><img src="~/assets/logo-primary.svg" alt="TAL"></div>
+  
+      <a href="#">
+        <div class="link helpBtn">Help</div>
+      </a>
+    </div>
+  
+  
     <div class="mainArea">
   
       <div class="LHSNav">
-       
-       
-      <myTALNav></myTALNav>
-
+  
+  
+        <myTALNav></myTALNav>
+  
       </div>
-
+  
       <div class="workArea">
         <div class="workAreaContent">
           <h1>Welcome LUCAS</h1>
-          <div>View and update your TAL insurance policies</div>
+ 
   
           <div class="CardArea">
   
-            <div v-for="CardData in Cards" :key="CardData.id">
+            <div v-for="CardData in CardsInsurance" :key="CardData.id">
               <div class="MyTALCard">
                 <h2>{{CardData.Type}}</h2>
                 <div v-for="(PolicyData, PolicyLabel) in CardData.policyData" :key="PolicyData.Policy">
@@ -50,19 +63,54 @@
                   </div>
                 </div>
                 <div style="padding-top:40px">
-                <a href="#" class="btn-primary">View Details</a>
+                  <a href="#" class="btn-primary">View Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+  
+ 
+  
+  
+          <div class="CardArea">
+  
+            <div v-for="CardData in CardsWealth" :key="CardData.id">
+              <div class="MyTALCard">
+                <h2>{{CardData.Type}}</h2>
+                <div v-for="(PolicyData, PolicyLabel) in CardData.policyData" :key="PolicyData.Policy">
+                  <div class="policyDataArea">
+                    <div class="policyLabelText">{{PolicyLabel}}:</div>
+                    <div>{{PolicyData}}</div>
+                  </div>
+                </div>
+                <div class="StatusText">
+                  <div class="AlertTextArea">
+                    <div class="ActionText pay-now">{{CardData.Alert}}</div>
+                    <div class="ActionText"><strong>{{CardData.AlertPrice}}</strong></div>
+                  </div>
+                  <div class="ActionTextArea">
+                    <div class="ActionText">{{CardData.Action}}</div>
+                    <a href="#" :class="[CardData.ActionButton]">Pay Now</a>
+                  </div>
+                </div>
+                <div style="padding-top:40px">
+                  <a href="#" class="btn-primary">View Details</a>
                 </div>
               </div>
             </div>
   
   
-          </div>
   
-          <div class="MyTALCard">
-            <h2>Can't find all your policies?</h2>
-            <p class="ActionText margin-top-30px">Click the add policy button to get started. If you don't have your policy number on hand please call 1300 209 088.</p>
+          </div>
+
+          <div class="MyTALCard-Base">
+            <h2>Can't find all your TAL products</h2>
+            <p class="ActionText margin-top-30px">Click the add button to get started.
+  
+              <br> If you don't have your policy or investment number on hand please call 1300 209 088.</p>
             <div class="margin-top-30px"></div>
-            <a href="#" class="btn-primary ">Add Policy</a>
+            <a href="#" class="btn-primary ">Add </a>
           </div>
   
         </div>
@@ -79,9 +127,9 @@
 <script>
   import MyTalFooter from '~/components/MyTalFooter.vue'
   import myTALNav from '~/components/myTAL-Nav.vue'
-
-
-
+  
+  
+  
   export default {
     components: {
       MyTalFooter,
@@ -89,8 +137,8 @@
     },
     data: function() {
       return {
-
-        Cards: {
+  
+        CardsInsurance: {
           Card1: {
             id: 1,
             Type: "Accelerated Protection",
@@ -122,47 +170,61 @@
             AlertPrice: "Amount: $718.32",
             Action: "If you would like to pay your premium now, please click on Pay Now.",
             ActionButton: "btn-primary-danger"
+          }
+        },
+  
+        CardsWealth: {
+          Card1: {
+            id: 3,
+            Type: "Smart Wealth",
+            policyData: {
+              "Nick Name": "Sarah School fund",
+              "Account Number": 332323223,
+              "Ballance": "$239.44",
+              "Start Date": "10/1/2019",
+              "10 Year Tax Date ": "10/1/2029",
+              "Purpose": "Education Savings",
+              "Goal Amount": "$120,000",
+              "Adviser Name": "Mr. Jack Black"
+            },
+            Alert: "",
+            AlertPrice: "",
+            Action: "Your next payment will be on the 12/09/2019",
+            ActionButton: "btn-primary-outline"
           },
         }
       }
     },
-    methods:{
-            
+    methods: {
+  
     }
-    
+  
   }
-
-
-
-
-
 </script>
 
 <style>
-
-.TreeNavigation li {
+  .TreeNavigation li {
     padding-left: 20px !important;
-    color:white !important;
-}
-
-
-.margin-top-30px{
-  padding-top:30px
-}
-
+    color: white !important;
+  }
+  
+  .margin-top-30px {
+    padding-top: 30px
+  }
+  
   h2 {
     font-size: 1.125rem;
     line-height: 1.3333333333;
   }
-
-  .pay-now{
+  
+  .pay-now {
     color: #e50404;
     font-weight: bold;
   }
   
   .Grid {
     display: grid;
-    grid-template-rows: 39px 85px auto 235px;
+    grid-template-rows: 39px 85px 0px auto 235px;
     min-height: 100vh;
   }
   
@@ -176,7 +238,7 @@
     font-size: .625rem;
   }
   
-  .navigation {
+  .navigationDesktop {
     background-color: rgb(255, 255, 255);
     border-bottom: 1px solid rgb(232, 232, 232);
     padding-left: 60px;
@@ -185,13 +247,18 @@
     align-items: center;
   }
   
+  .navigationMobile {
+    visibility: hidden;
+  }
+  
   .mainArea {
     display: grid;
     grid-template-columns: 330px 1fr;
   }
   
   .workArea {
-    background-image: url(/bg-cliff.jpg);
+   /* background-image: url(/bg-cliff.jpg);*/
+   background-color: rgb(235, 235, 235);
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
@@ -204,9 +271,28 @@
   
   .CardArea {
     display: flex;
+    align-content: stretch;
   }
   
   .MyTALCard {
+    background-color: white;
+    color: #222;
+    padding: 30px;
+    margin-top: 30px;
+    margin-right: 30px;
+    max-width: 456px;
+    min-width: 256px;
+    flex: 1;
+
+  }
+  
+  hr {
+    width: 940px;
+    margin-top: 30px;
+
+  }
+  
+  .MyTALCard-Base {
     background-color: white;
     color: #222;
     padding: 30px;
@@ -369,4 +455,46 @@
     font-size: .9375rem;
     line-height: 1.33;
   }
+  
+  /*
+  @media only screen and (max-width: 1200px) {
+    .Grid {
+      display: grid;
+      grid-template-rows: 0px 0px 62px auto 235px;
+      min-height: 100vh;
+    }
+    .topBar {
+      visibility: hidden;
+    }
+    .navigationDesktop {
+      visibility: hidden;
+    }
+    .navigationMobile {
+      visibility: visible;
+      background-color: rgb(255, 255, 255);
+      border-bottom: 1px solid rgb(232, 232, 232);
+      padding-left: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .myTALtext {
+      flex-grow: 0;
+    }
+    .mainArea {
+      display: grid;
+      grid-template-columns: 0px 1fr;
+    }
+    .workArea {
+      background-image: url(/bg-cliff.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: white;
+    }
+    .workAreaContent {
+      max-width: 1100px;
+      padding: 60px;
+    }
+   
+  } */
 </style>
