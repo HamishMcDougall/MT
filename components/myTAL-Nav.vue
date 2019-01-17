@@ -132,39 +132,39 @@
 
 
     .StartNavText {
-        color: #fff;
-        font-size: 15px;
-        font-size: .9375rem;
-        margin-bottom: 25px;
-        margin-top: 20px;
-        line-height: 1.33;
-        letter-spacing: inherit;
-        font-weight: 700;
+        color: #fff !important !important;
+        font-size: 15px !important !important;
+        font-size: .9375rem !important !important;
+        margin-bottom: 25px !important !important;
+        margin-top: 20px !important !important;
+        line-height: 1.33 !important !important;
+        letter-spacing: inherit !important !important;
+        font-weight: 700 !important !important;
     }
     
     .Navigation {
-        color: white;
-        font-size: .8125rem;
-        line-height: 1.1538461538;
-        font-weight: 500;
-        transition-duration: 250ms;
+        color: white !important;
+        font-size: .8125rem !important;
+        line-height: 1.1538461538 !important;
+        font-weight: 500 !important;
+        transition-duration: 250ms !important;
     }
     
     .example-tree {
-        margin-left: -43px;
-        max-width: 270px !important;
+        margin-left: -43px !important;
+        max-width: 270px !important !important;
     }
     
     .navText {
-        margin-left: 30px;
-        white-space: normal;
-         transition-duration: 250ms;
+        margin-left: 30px !important;
+        white-space: normal !important;
+         transition-duration: 250ms !important;
     }
     
     .navText:hover {
-        margin-left: 30px;
-        white-space: normal;
-        color: #80C342;
+        margin-left: 30px !important;
+        white-space: normal !important;
+        color: #80C342 !important;
     }
     
     .icon-menu {
@@ -173,73 +173,73 @@
     
     .tree-children .tree-node .tree-content .tree-anchor {
         border-bottom: 1px solid transparent !important;
-        margin-left: -50px;
+        margin-left: -50px !important;
       
     }
 
 
     .tree-children  .tree-node {
-       background-color: #35434b;
-       margin-left:33px;
-       margin-top:-3px;
+       background-color: #35434b !important;
+       margin-left:33px !important;
+       margin-top:-3px !important;
     }
     
     .tree-root .tree-node .tree-content .tree-anchor {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        padding-top: 10px;
-        padding-bottom: 10px;
-        white-space: normal;
+        border-bottom: 1px solid  #35434b !important;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        white-space: normal !important;
     }
     
     .tree-node {
-        white-space: normal;
+        white-space: normal !important;
     }
     
     .tree-arrow.has-child:after {
-        border: 1px solid white;
-        /* position: absolute; */
-        border-left: 0;
-        border-top: 0;
-        left: 235px;
-        top: 50%;
-        height: 9px;
-        width: 9px;
-        transform: rotateZ(45deg);
-        transform-origin: center;
-        margin-top: -8px;
+        border: 1px solid white !important;
+        /* position: absolute !important; */
+        border-left: 0 !important;
+        border-top: 0 !important;
+        left: 235px !important;
+        top: 50% !important;
+        height: 9px !important;
+        width: 9px !important;
+        transform: rotateZ(45deg) !important;
+        transform-origin: center !important;
+        margin-top: -8px !important;
     }
     
     .tree-arrow.expanded.has-child:after {
-        border: 1px solid #80C342;
-        /* position: absolute; */
-        border-left: 0;
-        border-top: 0;
-        left: 235px;
-        top: 50%;
-        height: 9px;
-        width: 9px;
-        transform: rotateZ(225deg);
-        transform-origin: center;
-        margin-top: -8px;
+        border: 1px solid #80C342 !important;
+        /* position: absolute !important; */
+        border-left: 0 !important;
+        border-top: 0 !important;
+        left: 235px !important;
+        top: 50% !important;
+        height: 9px !important;
+        width: 9px !important;
+        transform: rotateZ(225deg) !important;
+        transform-origin: center !important;
+        margin-top: -8px !important;
     }
     
     .tree-node.selected>.tree-content {
-        background-color: transparent;
+        background-color: transparent !important;
     }
     
     .tree-node:not(.selected)>.tree-content:hover {
-        background: transparent;
+        background: transparent !important;
     }
     
     .l-fade-enter-active,
     .l-fade-leave-active {
-        transition: opacity .3s, transform .3s;
-        transform: translateY(0);
+        transition: opacity .3s, transform .3s !important;
+        transform: translateY(0) !important;
     }
     
     .l-fade-enter,
     .l-fade-leave-to {
-        opacity: 0;
-        transform: translateY(-0.1em);
+        opacity: 0 !important;
+        transform: translateY(-0.1em) !important;
     }
 </style>
