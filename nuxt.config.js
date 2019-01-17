@@ -64,7 +64,9 @@ module.exports = {
     }
 
   },
+  /* need this to generate only not local
   router: {
     base: '/BondNew/dist/'
   }
+  /*
 }
