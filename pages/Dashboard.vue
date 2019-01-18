@@ -8,7 +8,7 @@
       </a>
     </div>
     <div class="navigationDesktop">
-      <div><img src="~/assets/logo-primary.svg" alt="TAL"></div>
+      <div><a href="dashboard"><img src="~/assets/logo-primary.svg" alt="TAL"><a></div>
       <div class="myTALtext">myTAL</div>
       <a href="#">
         <div class="link helpBtn">Help</div>
@@ -95,7 +95,7 @@
                   </div>
                 </div>
                 <div style="padding-top:40px">
-                  <a href="#" class="btn-primary">View Details</a>
+                  <a href="bondPolicyDetails" class="btn-primary">View Details</a>
                 </div>
               </div>
             </div>

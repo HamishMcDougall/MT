@@ -37,6 +37,7 @@ module.exports = {
   */
   plugins: [
     { src: '~plugins/Liquor-tree', ssr: false },
+    { src: '~plugins/highcharts-vue', ssr: false}
     /*  { src: '~plugins/vue-awesome', ssr: false } */
   ],
 

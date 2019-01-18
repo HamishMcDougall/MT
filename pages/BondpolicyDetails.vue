@@ -8,7 +8,7 @@
             </a>
         </div>
         <div class="navigationDesktop">
-            <div><img src="~/assets/logo-primary.svg" alt="TAL"></div>
+            <div><a href="dashboard"> <img src="~/assets/logo-primary.svg" alt="TAL"></a></div>
             <div class="myTALtext">myTAL</div>
             <a href="#">
                 <div class="link helpBtn">Help</div>
@@ -46,22 +46,65 @@
     
                         <div v-for="CardData in CardPolicyInsurance" :key="CardData.id">
                             <div class="MyTALPolicyCard">
-                                <h2>Policy Details</h2>
+    
     
     
                                 <div class="topDetails">
     
     
-                                    <div class="policyDetails">
+                                    <div class="">
                                         <div v-for="(PolicyData, PolicyLabel) in CardData.policyData" :key="PolicyData.Policy">
-                                            <div class="policyDataArea">
-                                                <div class="policyLabelText">{{PolicyLabel}}:</div>
-                                                <div>{{PolicyData}}</div>
+                                            <div class="Balance">
+                                                <div class="">
+                                                    <h1>{{PolicyLabel}}:</h1>
+                                                </div>
+                                                <div>
+                                                    <h1>{{PolicyData}}</h1>
+                                                </div>
                                             </div>
                                         </div>
+    
+                                    </div>
+                                    <ballanceHistory></ballanceHistory>
+    
+    
+    
+    
+                                </div>
+    
+                                <div class="middleDetails">
+    
+                                    <div class="leftDetails">
+                                        <h2>Recent activity</h2>
+    
+                                        <div class="ActivityFeedArea" v-for="ActivityData) in Activity">
+                                            <div class="DateText">{{ActivityData.Date}} </div>
+                                            <div class="FeeText"> {{ActivityData.FType}}
+                                                <div style="float:right" :class="[ActivityData.AType]">{{ActivityData.Amount}}</div>
+                                            </div>
+                                            <div class="AtypeText"> {{ActivityData.Type}}</div>
+                                            
+                                        </div>
+    
                                     </div>
     
-                                    <div class="contactDetails">
+    
+                                    <div class="rightDetails">
+                                        <h2>How my account is invested</h2>
+                                        <accountInvestmentChart></accountInvestmentChart>
+                                    </div>
+    
+                                </div>
+    
+    
+                                <div class="middleDetails">
+                                    <div class="leftDetails">
+                                        <h2>Asset allocation</h2>
+                                        <assetAllocationChart></assetAllocationChart>
+                                    </div>
+    
+                                    <div class="rightDetails">
+                                        <h2>Personal Details</h2>
                                         <div v-for="(PolicyData, PolicyLabel) in CardData.contactDetails">
                                             <div class="contactDataArea">
                                                 <div>
@@ -73,26 +116,11 @@
     
                                             </div>
                                         </div>
-                                    </div>
     
+                                    </div>
     
                                 </div>
     
-    
-    
-                                <div class="StatusText">
-                                    <div class="AlertTextArea">
-                                        <div class="ActionText pay-now">{{CardData.Alert}}</div>
-                                        <div class="ActionText"><strong>{{CardData.AlertPrice}}</strong></div>
-                                    </div>
-                                    <div class="ActionTextArea">
-                                        <div class="ActionText">{{CardData.Action}}</div>
-                                        <a href="#" :class="[CardData.ActionButton]">Pay Now</a>
-                                    </div>
-                                </div>
-                                <div style="padding-top:40px">
-                                    <a href="#" class="btn-primary">View Details</a>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -117,13 +145,18 @@
 <script>
     import MyTalFooter from '~/components/MyTalFooter.vue'
     import myTALNav from '~/components/myTAL-Nav.vue'
-    
+    import accountInvestmentChart from '~/components/accountInvestmentChart.vue'
+    import ballanceHistory from '~/components/ballanceHistory.vue'
+    import assetAllocationChart from '~/components/assetAllocationChart.vue'
     
     
     export default {
         components: {
             MyTalFooter,
-            myTALNav
+            myTALNav,
+            accountInvestmentChart,
+            ballanceHistory,
+            assetAllocationChart
         },
         data: function() {
             return {
@@ -133,12 +166,8 @@
                         id: 1,
                         Type: "Accelerated Protection",
                         policyData: {
-                            "Policy Number": 22323223,
-                            "Policy owner": "Mercer Superannuation (Australia) Limited",
-                            "LUCAS JAMES FINLAY": "$1,545.00",
-                            "Policy status": "In Force",
-                            "Commencement date": "31/01/2017",
-                            "Anniversary date": "31/01/2019"
+                            "Current Balance": "$32,454.45",
+    
                         },
                         contactDetails: {
                             "Postal address": "123 Easy Street, Melbourne, Vic, 3000",
@@ -148,12 +177,51 @@
                             "Work Number": ""
     
                         },
-                        Alert: "",
-                        AlertPrice: "",
-                        Action: "If you would like to pay your premium now, please click on Pay Now.",
-                        ActionButton: "btn-primary-outline"
-    
                     }
+                },
+                Activity: {
+                    Data1: {
+                        Date: "31 March 2018",
+                        FType: "Ongoing Member Advice Fee",
+                        Amount: "-$27.83",
+                        AType: "Negative",
+                        Type: "Southerly"
+                    },
+                    Data2: {
+                        Date: "2 April 2018",
+                        FType: "Regular Investment",
+                        Amount: "$6,000.00",
+                        AType: "Positive",
+                        Type: "Direct Debit"
+                    },
+                    Data3: {
+                        Date: "31 March 2017",
+                        FType: "Ongoing Member Advice Fee",
+                        Amount: "-$27.83",
+                        AType: "Negative",
+                        Type: "Southerly"
+                    },
+                    Data4: {
+                        Date: "2 April 2017",
+                        FType: "Regular Investment",
+                        Amount: "$6,000.00",
+                        AType: "Positive",
+                        Type: "Direct Debit"
+                    },
+                    Data5: {
+                        Date: "31 March 2017",
+                        FType: "Ongoing Member Advice Fee",
+                        Amount: "-$27.83",
+                        AType: "Negative",
+                        Type: "Southerly"
+                    },
+                    Data6: {
+                        Date: "2 April 2017",
+                        FType: "Regular Investment",
+                        Amount: "$6,000.00",
+                        AType: "Positive",
+                        Type: "Direct Debit"
+                    },
                 }
     
             }
@@ -185,7 +253,6 @@
         font-weight: bold;
     }
     
-   
     .CardArea {
         display: flex;
         align-content: stretch;
@@ -201,16 +268,23 @@
     }
     
     .topDetails {
+        min-width: 700px;
+    }
+    
+    .middleDetails {
         display: flex;
+        padding-bottom: 20px;
+        padding-top:20px;
     }
     
-    .policyDetails {
+    .leftDetails {
         margin-right: 30px;
-        max-width: 350px;
+        min-width: 300px;
+        
     }
     
-    .contactDetails {
-        max-width: 350px;
+    .rightDetails {
+        min-width: 300px;
     }
     
     .policyDataArea {
@@ -222,16 +296,23 @@
         margin-top: 20px;
     }
     
+    .Balance {
+        display: flex;
+        justify-content: space-between;
+        font-size: .875rem;
+        margin-bottom: 20px;
+    }
+    
     .contactDataArea {
         display: flex;
         justify-content: space-between;
         font-size: .875rem;
-        padding:15px;
+        padding: 15px;
     }
-
-    .contactDataArea:hover{
+    
+    .contactDataArea:hover {
         background-color: rgb(247, 247, 247);
-        padding:15px;
+        padding: 15px;
     }
     
     .policyLabelText {
@@ -260,6 +341,28 @@
         vertical-align: bottom;
     }
     
+    .ActivityFeedArea {
+        font-size: .875rem;
+         border-bottom: 1px solid #e8e8e8;
+    }
+    
+    .Negative {
+        color: red;
+    }
+    
+    .DateText {
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        font-size: 8px;
+        margin-top: 10px;
+        opacity: 0.7;
+    }
+    
+    .AtypeText {
+        opacity: 0.5;
+    }
+    
     .StatusText {
         padding-top: 20px;
     }
@@ -281,8 +384,6 @@
         padding-right: 20px;
     }
     
-   
-    
     .phoneText {
         flex-grow: 1;
     }
@@ -290,7 +391,6 @@
     .UserEmail {
         padding-right: 50px;
     }
-    
     
     .myTALtext {
         flex-grow: 1;
@@ -325,44 +425,44 @@
     
     
     /*
-      @media only screen and (max-width: 1200px) {
-        .Grid {
-          display: grid;
-          grid-template-rows: 0px 0px 62px auto 235px;
-          min-height: 100vh;
-        }
-        .topBar {
-          visibility: hidden;
-        }
-        .navigationDesktop {
-          visibility: hidden;
-        }
-        .navigationMobile {
-          visibility: visible;
-          background-color: rgb(255, 255, 255);
-          border-bottom: 1px solid rgb(232, 232, 232);
-          padding-left: 60px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-        .myTALtext {
-          flex-grow: 0;
-        }
-        .mainArea {
-          display: grid;
-          grid-template-columns: 0px 1fr;
-        }
-        .workArea {
-          background-image: url(/bg-cliff.jpg);
-          background-repeat: no-repeat;
-          background-size: cover;
-          color: white;
-        }
-        .workAreaContent {
-          max-width: 1100px;
-          padding: 60px;
-        }
-       
-      } */
+                          @media only screen and (max-width: 1200px) {
+                            .Grid {
+                              display: grid;
+                              grid-template-rows: 0px 0px 62px auto 235px;
+                              min-height: 100vh;
+                            }
+                            .topBar {
+                              visibility: hidden;
+                            }
+                            .navigationDesktop {
+                              visibility: hidden;
+                            }
+                            .navigationMobile {
+                              visibility: visible;
+                              background-color: rgb(255, 255, 255);
+                              border-bottom: 1px solid rgb(232, 232, 232);
+                              padding-left: 60px;
+                              display: flex;
+                              justify-content: space-between;
+                              align-items: center;
+                            }
+                            .myTALtext {
+                              flex-grow: 0;
+                            }
+                            .mainArea {
+                              display: grid;
+                              grid-template-columns: 0px 1fr;
+                            }
+                            .workArea {
+                              background-image: url(/bg-cliff.jpg);
+                              background-repeat: no-repeat;
+                              background-size: cover;
+                              color: white;
+                            }
+                            .workAreaContent {
+                              max-width: 1100px;
+                              padding: 60px;
+                            }
+                           
+                          } */
 </style>
