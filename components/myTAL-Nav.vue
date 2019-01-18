@@ -126,14 +126,14 @@
 
 
     .StartNavText {
-        color: #fff !important !important;
-        font-size: 15px !important !important;
-        font-size: .9375rem !important !important;
-        margin-bottom: 25px !important !important;
-        margin-top: 20px !important !important;
-        line-height: 1.33 !important !important;
-        letter-spacing: inherit !important !important;
-        font-weight: 700 !important !important;
+        color: #fff !important ;
+        font-size: 15px !important ;
+        font-size: .9375rem !important ;
+        margin-bottom: 25px !important ;
+        margin-top: 20px !important ;
+        line-height: 1.33 !important ;
+        letter-spacing: inherit !important ;
+        font-weight: 700 !important ;
     }
     
     .Navigation {
@@ -146,7 +146,7 @@
     
     .example-tree {
         margin-left: -43px !important;
-        max-width: 270px !important !important;
+        max-width: 270px !important ;
     }
     
     .navText {
