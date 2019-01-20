@@ -1,140 +1,103 @@
 <template>
-  <div class="Grid">
-    <div class="topBar">
-      <div class="phoneText">1300 209 088</div>
-      <div class="UserEmail">XDDESIGN@GMAIL.COM</div>
-      <a href="#">
-        <div class="LogOutButton"> LOG OUT </div>
-      </a>
-    </div>
-    <div class="navigationDesktop">
-      <div><a href="dashboard"><img src="~/assets/logo-primary.svg" alt="TAL"><a></div>
-      <div class="myTALtext">myTAL</div>
-      <a href="#">
-        <div class="link helpBtn">Help</div>
-      </a>
+  <div class="mainArea">
+    <div class="LHSNav">  
+      <myTALNav></myTALNav>
     </div>
   
+    <div class="workArea">
+      <div class="workAreaContent">
+        <h1 class="WelcomeText">Welcome LUCAS</h1>
   
-    <div class="navigationMobile">
-      <div class="btn-primary-outline">Menu</div>
-  
-      <div><img src="~/assets/logo-primary.svg" alt="TAL"></div>
-  
-      <a href="#">
-        <div class="link helpBtn">Help</div>
-      </a>
-    </div>
-  
-  
-    <div class="mainArea">
-  
-      <div class="LHSNav">
-  
-  
-        <myTALNav></myTALNav>
-  
-      </div>
-  
-      <div class="workArea">
-        <div class="workAreaContent">
-          <h1 class="WelcomeText">Welcome LUCAS</h1>
- 
-  
-          <div class="CardArea">
-  
-            <div v-for="CardData in CardsInsurance" :key="CardData.id">
-              <div class="MyTALCard">
-                <h2>{{CardData.Type}}</h2>
-                <div v-for="(PolicyData, PolicyLabel) in CardData.policyData" :key="PolicyData.Policy">
-                  <div class="policyDataArea">
-                    <div class="policyLabelText">{{PolicyLabel}}:</div>
-                    <div>{{PolicyData}}</div>
-                  </div>
-                </div>
-                <div class="StatusText">
-                  <div class="AlertTextArea">
-                    <div class="ActionText pay-now">{{CardData.Alert}}</div>
-                    <div class="ActionText"><strong>{{CardData.AlertPrice}}</strong></div>
-                  </div>
-                  <div class="ActionTextArea">
-                    <div class="ActionText">{{CardData.Action}}</div>
-                    <a href="#" :class="[CardData.ActionButton]">Pay Now</a>
-                  </div>
-                </div>
-                <div style="padding-top:40px">
-                  <a href="#" class="btn-primary">View Details</a>
-                </div>
-              </div>
-            </div>
-          </div>
-  
-  
- 
-  
-  
-          <div class="CardArea">
-  
-            <div v-for="CardData in CardsWealth" :key="CardData.id">
-              <div class="MyTALCard">
-                <h2>{{CardData.Type}}</h2>
-                <div v-for="(PolicyData, PolicyLabel) in CardData.policyData" :key="PolicyData.Policy">
-                  <div class="policyDataArea">
-                    <div class="policyLabelText">{{PolicyLabel}}:</div>
-                    <div>{{PolicyData}}</div>
-                  </div>
-                </div>
-                <div class="StatusText">
-                  <div class="AlertTextArea">
-                    <div class="ActionText pay-now">{{CardData.Alert}}</div>
-                    <div class="ActionText"><strong>{{CardData.AlertPrice}}</strong></div>
-                  </div>
-                  <div class="ActionTextArea">
-                    <div class="ActionText">{{CardData.Action}}</div>
-                    <a href="#" :class="[CardData.ActionButton]">Pay Now</a>
-                  </div>
-                </div>
-                <div style="padding-top:40px">
-                  <a href="bondPolicyDetails" class="btn-primary">View Details</a>
-                </div>
-              </div>
-            </div>
-  
-  
-  
-          </div>
 
-          <div class="MyTALCard-Base">
-            <h2>Can't find all your TAL products</h2>
-            <p class="ActionText margin-top-30px">Click the add button to get started.
+        <div class="CardArea">
   
-              <br> If you don't have your policy or investment number on hand please call 1300 209 088.</p>
-            <div class="margin-top-30px"></div>
-            <a href="#" class="btn-primary ">Add </a>
+          <div v-for="CardData in CardsInsurance" :key="CardData.id">
+            <div class="MyTALCard">
+              <h2>{{CardData.Type}}</h2>
+              <div v-for="(PolicyData, PolicyLabel) in CardData.policyData" :key="PolicyData.Policy">
+                <div class="policyDataArea">
+                  <div class="policyLabelText">{{PolicyLabel}}:</div>
+                  <div>{{PolicyData}}</div>
+                </div>
+              </div>
+              <div class="StatusText">
+                <div class="AlertTextArea">
+                  <div class="ActionText pay-now">{{CardData.Alert}}</div>
+                  <div class="ActionText"><strong>{{CardData.AlertPrice}}</strong></div>
+                </div>
+                <div class="ActionTextArea">
+                  <div class="ActionText">{{CardData.Action}}</div>
+                  <a href="#" :class="[CardData.ActionButton]">Pay Now</a>
+                </div>
+              </div>
+              <div style="padding-top:40px">
+                <a href="#" class="btn-primary">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+  
+  
+  
+  
+        <div class="CardArea">
+  
+          <div v-for="CardData in CardsWealth" :key="CardData.id">
+            <div class="MyTALCard">
+              <h2>{{CardData.Type}}</h2>
+              <div v-for="(PolicyData, PolicyLabel) in CardData.policyData" :key="PolicyData.Policy">
+                <div class="policyDataArea">
+                  <div class="policyLabelText">{{PolicyLabel}}:</div>
+                  <div>{{PolicyData}}</div>
+                </div>
+              </div>
+              <div class="StatusText">
+                <div class="AlertTextArea">
+                  <div class="ActionText pay-now">{{CardData.Alert}}</div>
+                  <div class="ActionText"><strong>{{CardData.AlertPrice}}</strong></div>
+                </div>
+                <div class="ActionTextArea">
+                  <div class="ActionText">{{CardData.Action}}</div>
+                  <a href="#" :class="[CardData.ActionButton]">Pay Now</a>
+                </div>
+              </div>
+              <div style="padding-top:40px">
+                <a href="bondPolicyDetails" class="btn-primary">View Details</a>
+              </div>
+            </div>
           </div>
   
+  
+  
+        </div>
+  
+        <div class="MyTALCard-Base">
+          <h2>Can't find all your TAL products</h2>
+          <p class="ActionText margin-top-30px">Click the add button to get started.
+  
+            <br> If you don't have your policy or investment number on hand please call 1300 209 088.</p>
+          <div class="margin-top-30px"></div>
+          <a href="#" class="btn-primary ">Add </a>
         </div>
   
       </div>
   
     </div>
-    <div class="footer">
-      <MyTalFooter></MyTalFooter>
-    </div>
+  
   </div>
 </template>
 
 <script>
-  import MyTalFooter from '~/components/MyTalFooter.vue'
   import myTALNav from '~/components/myTAL-Nav.vue'
   
   
   
   export default {
     components: {
-      MyTalFooter,
       myTALNav
     },
+    layout: 'AppView',
     data: function() {
       return {
   
@@ -203,10 +166,10 @@
 </script>
 
 <style>
-
-.WelcomeText{
-  color:#232d32;
-}
+  .WelcomeText {
+    color: #232d32;
+  }
+  
   .TreeNavigation li {
     padding-left: 20px !important;
     color: white !important;
@@ -226,7 +189,6 @@
     font-weight: bold;
   }
   
-  
   .CardArea {
     display: flex;
     align-content: stretch;
@@ -241,13 +203,11 @@
     max-width: 456px;
     min-width: 256px;
     flex: 1;
-
   }
   
   hr {
     width: 940px;
     margin-top: 30px;
-
   }
   
   .MyTALCard-Base {
@@ -294,8 +254,6 @@
     padding-right: 20px;
   }
   
-  
-  
   .phoneText {
     flex-grow: 1;
   }
@@ -303,8 +261,6 @@
   .UserEmail {
     padding-right: 50px;
   }
-  
-  
   
   .myTALtext {
     flex-grow: 1;
@@ -337,45 +293,46 @@
     line-height: 1.33;
   }
   
+  
   /*
-  @media only screen and (max-width: 1200px) {
-    .Grid {
-      display: grid;
-      grid-template-rows: 0px 0px 62px auto 235px;
-      min-height: 100vh;
-    }
-    .topBar {
-      visibility: hidden;
-    }
-    .navigationDesktop {
-      visibility: hidden;
-    }
-    .navigationMobile {
-      visibility: visible;
-      background-color: rgb(255, 255, 255);
-      border-bottom: 1px solid rgb(232, 232, 232);
-      padding-left: 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .myTALtext {
-      flex-grow: 0;
-    }
-    .mainArea {
-      display: grid;
-      grid-template-columns: 0px 1fr;
-    }
-    .workArea {
-      background-image: url(/bg-cliff.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      color: white;
-    }
-    .workAreaContent {
-      max-width: 1100px;
-      padding: 60px;
-    }
-   
-  } */
+    @media only screen and (max-width: 1200px) {
+      .Grid {
+        display: grid;
+        grid-template-rows: 0px 0px 62px auto 235px;
+        min-height: 100vh;
+      }
+      .topBar {
+        visibility: hidden;
+      }
+      .navigationDesktop {
+        visibility: hidden;
+      }
+      .navigationMobile {
+        visibility: visible;
+        background-color: rgb(255, 255, 255);
+        border-bottom: 1px solid rgb(232, 232, 232);
+        padding-left: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .myTALtext {
+        flex-grow: 0;
+      }
+      .mainArea {
+        display: grid;
+        grid-template-columns: 0px 1fr;
+      }
+      .workArea {
+        background-image: url(/bg-cliff.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+      }
+      .workAreaContent {
+        max-width: 1100px;
+        padding: 60px;
+      }
+     
+    } */
 </style>

@@ -1,7 +1,7 @@
 
   .Grid {
     display: grid;
-    grid-template-rows: 39px 85px 0px auto 235px;
+    grid-template-rows: 39px 85px auto 235px;
     min-height: 100vh;
   }
   

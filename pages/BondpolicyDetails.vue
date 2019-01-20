@@ -1,149 +1,115 @@
 <template>
-    <div class="Grid">
-        <div class="topBar">
-            <div class="phoneText">1300 209 088</div>
-            <div class="UserEmail">XDDESIGN@GMAIL.COM</div>
-            <a href="#">
-                <div class="LogOutButton"> LOG OUT </div>
-            </a>
-        </div>
-        <div class="navigationDesktop">
-            <div><a href="dashboard"> <img src="~/assets/logo-primary.svg" alt="TAL"></a></div>
-            <div class="myTALtext">myTAL</div>
-            <a href="#">
-                <div class="link helpBtn">Help</div>
-            </a>
+    <div class="mainArea">
+    
+        <div class="LHSNav">
+    
+    
+            <myTALNav></myTALNav>
+    
         </div>
     
-    
-        <div class="navigationMobile">
-            <div class="btn-primary-outline">Menu</div>
-    
-            <div><img src="~/assets/logo-primary.svg" alt="TAL"></div>
-    
-            <a href="#">
-                <div class="link helpBtn">Help</div>
-            </a>
-        </div>
+        <div class="workArea">
+            <div class="workAreaContent">
+                <h1 class="WelcomeText">Smart Wealth - 22323223</h1>
     
     
-        <div class="mainArea">
-    
-            <div class="LHSNav">
+                <div class="CardArea">
     
     
-                <myTALNav></myTALNav>
-    
-            </div>
-    
-            <div class="workArea">
-                <div class="workAreaContent">
-                    <h1 class="WelcomeText">Smart Wealth - 22323223</h1>
-    
-    
-                    <div class="CardArea">
-    
-    
-                        <div v-for="CardData in CardPolicyInsurance" :key="CardData.id">
-                            <div class="MyTALPolicyCard">
+                    <div v-for="CardData in CardPolicyInsurance" :key="CardData.id">
+                        <div class="MyTALPolicyCard">
     
     
     
-                                <div class="topDetails">
+                            <div class="topDetails">
     
     
-                                    <div class="">
-                                        <div v-for="(PolicyData, PolicyLabel) in CardData.policyData" :key="PolicyData.Policy">
-                                            <div class="Balance">
-                                                <div class="">
-                                                    <h1>{{PolicyLabel}}:</h1>
-                                                </div>
-                                                <div>
-                                                    <h1>{{PolicyData}}</h1>
-                                                </div>
+                                <div class="">
+                                    <div v-for="(PolicyData, PolicyLabel) in CardData.policyData" :key="PolicyData.Policy">
+                                        <div class="Balance">
+                                            <div class="">
+                                                <h1>{{PolicyLabel}}:</h1>
+                                            </div>
+                                            <div>
+                                                <h1>{{PolicyData}}</h1>
                                             </div>
                                         </div>
-    
                                     </div>
-                                    <ballanceHistory></ballanceHistory>
-    
-    
-    
     
                                 </div>
+                                <ballanceHistory></ballanceHistory>
     
-                                <div class="middleDetails">
     
-                                    <div class="leftDetails">
-                                        <h2>Recent activity</h2>
     
-                                        <div class="ActivityFeedArea" v-for="ActivityData) in Activity">
-                                            <div class="DateText">{{ActivityData.Date}} </div>
-                                            <div class="FeeText"> {{ActivityData.FType}}
-                                                <div style="float:right" :class="[ActivityData.AType]">{{ActivityData.Amount}}</div>
-                                            </div>
-                                            <div class="AtypeText"> {{ActivityData.Type}}</div>
-                                            
+    
+                            </div>
+    
+                            <div class="middleDetails">
+    
+                                <div class="leftDetails">
+                                    <h2>Recent activity</h2>
+    
+                                    <div class="ActivityFeedArea" v-for="ActivityData) in Activity">
+                                        <div class="DateText">{{ActivityData.Date}} </div>
+                                        <div class="FeeText"> {{ActivityData.FType}}
+                                            <div style="float:right" :class="[ActivityData.AType]">{{ActivityData.Amount}}</div>
                                         </div>
+                                        <div class="AtypeText"> {{ActivityData.Type}}</div>
     
-                                    </div>
-    
-    
-                                    <div class="rightDetails">
-                                        <h2>How my account is invested</h2>
-                                        <accountInvestmentChart></accountInvestmentChart>
                                     </div>
     
                                 </div>
     
     
-                                <div class="middleDetails">
-                                    <div class="leftDetails">
-                                        <h2>Asset allocation</h2>
-                                        <assetAllocationChart></assetAllocationChart>
-                                    </div>
+                                <div class="rightDetails">
+                                    <h2>How my account is invested</h2>
+                                    <accountInvestmentChart></accountInvestmentChart>
+                                </div>
     
-                                    <div class="rightDetails">
-                                        <h2>Personal Details</h2>
-                                        <div v-for="(PolicyData, PolicyLabel) in CardData.contactDetails">
-                                            <div class="contactDataArea">
-                                                <div>
-                                                    <div class="contactLabelText">{{PolicyLabel}}:</div>
-                                                    <div>{{PolicyData}} </div>
-                                                </div>
-                                                <div><a class="editLink" href="#">Edit</a></div>
+                            </div>
     
     
+                            <div class="middleDetails">
+                                <div class="leftDetails">
+                                    <h2>Asset allocation</h2>
+                                    <assetAllocationChart></assetAllocationChart>
+                                </div>
+    
+                                <div class="rightDetails">
+                                    <h2>Personal Details</h2>
+                                    <div v-for="(PolicyData, PolicyLabel) in CardData.contactDetails">
+                                        <div class="contactDataArea">
+                                            <div>
+                                                <div class="contactLabelText">{{PolicyLabel}}:</div>
+                                                <div>{{PolicyData}} </div>
                                             </div>
-                                        </div>
+                                            <div><a class="editLink" href="#">Edit</a></div>
     
+    
+                                        </div>
                                     </div>
     
                                 </div>
     
                             </div>
+    
                         </div>
                     </div>
-    
-    
-    
-    
-    
-    
-    
                 </div>
+    
+
+    
+    
     
             </div>
     
         </div>
-        <div class="footer">
-            <MyTalFooter></MyTalFooter>
-        </div>
+    
+    
     </div>
 </template>
 
 <script>
-    import MyTalFooter from '~/components/MyTalFooter.vue'
     import myTALNav from '~/components/myTAL-Nav.vue'
     import accountInvestmentChart from '~/components/accountInvestmentChart.vue'
     import ballanceHistory from '~/components/ballanceHistory.vue'
@@ -152,12 +118,12 @@
     
     export default {
         components: {
-            MyTalFooter,
             myTALNav,
             accountInvestmentChart,
             ballanceHistory,
             assetAllocationChart
         },
+        layout: 'AppView',
         data: function() {
             return {
     
@@ -274,13 +240,12 @@
     .middleDetails {
         display: flex;
         padding-bottom: 20px;
-        padding-top:20px;
+        padding-top: 20px;
     }
     
     .leftDetails {
         margin-right: 30px;
         min-width: 300px;
-        
     }
     
     .rightDetails {
@@ -343,7 +308,7 @@
     
     .ActivityFeedArea {
         font-size: .875rem;
-         border-bottom: 1px solid #e8e8e8;
+        border-bottom: 1px solid #e8e8e8;
     }
     
     .Negative {
@@ -425,44 +390,44 @@
     
     
     /*
-                          @media only screen and (max-width: 1200px) {
-                            .Grid {
-                              display: grid;
-                              grid-template-rows: 0px 0px 62px auto 235px;
-                              min-height: 100vh;
-                            }
-                            .topBar {
-                              visibility: hidden;
-                            }
-                            .navigationDesktop {
-                              visibility: hidden;
-                            }
-                            .navigationMobile {
-                              visibility: visible;
-                              background-color: rgb(255, 255, 255);
-                              border-bottom: 1px solid rgb(232, 232, 232);
-                              padding-left: 60px;
-                              display: flex;
-                              justify-content: space-between;
-                              align-items: center;
-                            }
-                            .myTALtext {
-                              flex-grow: 0;
-                            }
-                            .mainArea {
-                              display: grid;
-                              grid-template-columns: 0px 1fr;
-                            }
-                            .workArea {
-                              background-image: url(/bg-cliff.jpg);
-                              background-repeat: no-repeat;
-                              background-size: cover;
-                              color: white;
-                            }
-                            .workAreaContent {
-                              max-width: 1100px;
-                              padding: 60px;
-                            }
-                           
-                          } */
+                              @media only screen and (max-width: 1200px) {
+                                .Grid {
+                                  display: grid;
+                                  grid-template-rows: 0px 0px 62px auto 235px;
+                                  min-height: 100vh;
+                                }
+                                .topBar {
+                                  visibility: hidden;
+                                }
+                                .navigationDesktop {
+                                  visibility: hidden;
+                                }
+                                .navigationMobile {
+                                  visibility: visible;
+                                  background-color: rgb(255, 255, 255);
+                                  border-bottom: 1px solid rgb(232, 232, 232);
+                                  padding-left: 60px;
+                                  display: flex;
+                                  justify-content: space-between;
+                                  align-items: center;
+                                }
+                                .myTALtext {
+                                  flex-grow: 0;
+                                }
+                                .mainArea {
+                                  display: grid;
+                                  grid-template-columns: 0px 1fr;
+                                }
+                                .workArea {
+                                  background-image: url(/bg-cliff.jpg);
+                                  background-repeat: no-repeat;
+                                  background-size: cover;
+                                  color: white;
+                                }
+                                .workAreaContent {
+                                  max-width: 1100px;
+                                  padding: 60px;
+                                }
+                               
+                              } */
 </style>
