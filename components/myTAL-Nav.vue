@@ -51,7 +51,7 @@
                     {
                         text: 'Request a Statement',
                         data: {
-                            icon: '.request-statement-0.svg',
+                            icon: '',
                             link: 'Testpage'
                         }
     
@@ -59,7 +59,7 @@
                     {
                         text: 'Request a Certificate of Currency',
                         data: {
-                            icon: '.request-CC-0.svg',
+                            icon: '',
                             link: 'Testpage'
                         }
     
@@ -121,6 +121,9 @@
 
 <style lang="scss">
 
+ .tree-anchor {
+   padding-left: 0px !important;
+ }
 
 
 
