@@ -24,6 +24,20 @@
      title: {
         text: ''
     },
+    colors: [
+'#80C342', 
+'#2FB3B6', 
+'#F7931E', 
+'#F15A24', 
+'#303E46', 
+'#EFEFD2'
+],
+
+plotOptions: {
+    column: {
+        colorByPoint: true
+    }
+},
      tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
     },plotOptions: {

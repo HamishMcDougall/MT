@@ -119,7 +119,7 @@
     }
 </script>
 
-<style>
+<style lang="scss">
 
 
 
@@ -208,7 +208,7 @@
     }
     
     .tree-arrow.expanded.has-child:after {
-        border: 1px solid #80C342 !important;
+        border: 1px solid $Primary-LightGreen !important;
         /* position: absolute !important; */
         border-left: 0 !important;
         border-top: 0 !important;

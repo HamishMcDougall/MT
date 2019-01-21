@@ -127,4 +127,10 @@
     .small {
         padding-bottom: 20px;
     }
+
+    .myTALtext{
+        font-size: .6875rem;
+        margin-left: 30px;
+        font-weight: 700;
+    }
 </style>
