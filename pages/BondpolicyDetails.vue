@@ -11,7 +11,7 @@
         <div class="workArea">
             <div class="workAreaContent">
                 <h1 class="WelcomeText">Smart Wealth - 22323223</h1>
-    
+                    <div class="breadcrumbText"><a href="#" class="breadcrumb">DASHBOARD </a> /  Smart Wealth</div>
     
                 <div class="CardArea">
     
@@ -195,34 +195,15 @@
     }
 </script>
 
-<style>
-    .WelcomeText {
-        color: #232d32;
-    }
-    
-    .TreeNavigation li {
-        padding-left: 20px !important;
-        color: white !important;
-    }
-    
+<style scoped>
+
+
+  
+
     .margin-top-30px {
         padding-top: 30px
     }
     
-    h2 {
-        font-size: 1.125rem;
-        line-height: 1.3333333333;
-    }
-    
-    .pay-now {
-        color: #e50404;
-        font-weight: bold;
-    }
-    
-    .CardArea {
-        display: flex;
-        align-content: stretch;
-    }
     
     .MyTALPolicyCard {
         background-color: white;
@@ -233,33 +214,23 @@
         flex: 1;
     }
     
-    .topDetails {
-        min-width: 700px;
-    }
-    
+  
     .middleDetails {
         display: flex;
         padding-bottom: 20px;
         padding-top: 20px;
+        justify-content: flex-start;
     }
     
     .leftDetails {
         margin-right: 30px;
-        min-width: 300px;
+        min-width: 450px;
     }
     
     .rightDetails {
-        min-width: 300px;
+        min-width: 450px;
     }
     
-    .policyDataArea {
-        display: flex;
-        justify-content: space-between;
-        border-bottom: 1px solid #e8e8e8;
-        font-size: .875rem;
-        padding-bottom: 5px;
-        margin-top: 20px;
-    }
     
     .Balance {
         display: flex;
@@ -310,10 +281,9 @@
         font-size: .875rem;
         border-bottom: 1px solid #e8e8e8;
     }
+
     
-    .Negative {
-        color: red;
-    }
+   
     
     .DateText {
         text-transform: uppercase;
@@ -349,85 +319,7 @@
         padding-right: 20px;
     }
     
-    .phoneText {
-        flex-grow: 1;
-    }
-    
-    .UserEmail {
-        padding-right: 50px;
-    }
-    
-    .myTALtext {
-        flex-grow: 1;
-    }
-    
-    .helpBtn {
-        margin-right: 50px;
-    }
-    
-    .link {
-        font-size: .875rem;
-        font-weight: 500;
-        color: #222;
-        text-decoration: none;
-        border-bottom: 2px solid #80C342;
-        text-transform: uppercase;
-    }
-    
-    .link:hover {
-        border-bottom: 2px solid #80C342;
-        background-color: #80C342;
-    }
-    
-    .LHSNav {
-        padding-left: 60px;
-        padding-top: 30px;
-        background-color: #232d32;
-        color: white;
-        font-size: .9375rem;
-        line-height: 1.33;
-    }
     
     
-    /*
-                              @media only screen and (max-width: 1200px) {
-                                .Grid {
-                                  display: grid;
-                                  grid-template-rows: 0px 0px 62px auto 235px;
-                                  min-height: 100vh;
-                                }
-                                .topBar {
-                                  visibility: hidden;
-                                }
-                                .navigationDesktop {
-                                  visibility: hidden;
-                                }
-                                .navigationMobile {
-                                  visibility: visible;
-                                  background-color: rgb(255, 255, 255);
-                                  border-bottom: 1px solid rgb(232, 232, 232);
-                                  padding-left: 60px;
-                                  display: flex;
-                                  justify-content: space-between;
-                                  align-items: center;
-                                }
-                                .myTALtext {
-                                  flex-grow: 0;
-                                }
-                                .mainArea {
-                                  display: grid;
-                                  grid-template-columns: 0px 1fr;
-                                }
-                                .workArea {
-                                  background-image: url(/bg-cliff.jpg);
-                                  background-repeat: no-repeat;
-                                  background-size: cover;
-                                  color: white;
-                                }
-                                .workAreaContent {
-                                  max-width: 1100px;
-                                  padding: 60px;
-                                }
-                               
-                              } */
+    
 </style>

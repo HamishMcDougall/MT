@@ -1,11 +1,11 @@
 .btn-primary {
     padding: 12px 20px 8px;
     border-radius: 3px;
-    border: 1px solid #80C342;
+    border: 1px solid $Primary-LightGreen;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #232d32;
-    background-color: #80C342;
+    background-color: $Primary-LightGreen;
     font-weight: 700;
     -webkit-font-smoothing: subpixel-antialiased;
     font-size: .75rem;
@@ -20,11 +20,11 @@
 
 .btn-primary-outline {
     background-color: transparent;
-    border-color: #80C342;
+    border-color: $Primary-LightGreen;
     color: #232d32;
     padding: 12px;
     border-radius: 3px;
-    border: 1px solid #80C342;
+    border: 1px solid $Primary-LightGreen;
     text-transform: uppercase;
     font-weight: 700;
     font-size: .75rem;
@@ -38,8 +38,8 @@
 }
 
 .btn-primary-danger {
-    background-color: #e50404;
-    border-color: #e50404;
+    background-color: $Secondary-Vermilion;
+    border-color: $Secondary-Vermilion;
     color: #fff;
     padding: 12px;
     display: inline-block;
@@ -75,6 +75,6 @@ a:hover {
   }
   
   .LogOutButton:hover {
-    border-color: #80C342;
-    color: #80C342;
+    border-color: $Primary-LightGreen;
+    color: $Primary-LightGreen;
   }

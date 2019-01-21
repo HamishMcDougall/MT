@@ -5,60 +5,80 @@
 </template>
 
 <script>
-    import {Chart} from 'highcharts-vue'
+    import {
+        Chart
+    } from 'highcharts-vue'
     export default {
         components: {
             highcharts: Chart
         },
-         data() {
-    return {
-      chartOptions: {
-            title: {
-        text: ''
-    },
-                 xAxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-    },
-    yAxis: {
-        title: {
-            text: '$ 000'
+        data() {
+            return {
+                chartOptions: {
+                    title: {
+                        text: ''
+                    },
+                    xAxis: {
+                        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+                    },
+                    yAxis: {
+                        title: {
+                            text: '$ 000'
+                        }
+                    },
+    
+                    colors: [
+                        '#303E46',
+                        '#80C342',
+                        '#2FB3B6',
+                        '#F7931E',
+                        '#F15A24',
+                        '#303E46',
+                        '#EFEFD2'
+                    ],
+    
+                    plotOptions: {
+                        column: {
+                            colorByPoint: true
+                        }
+                    },
+    
+                    legend: {
+                        enabled: false,
+                    },
+                    plotOptions: {
+                        series: {
+                            allowPointSelect: true
+                        },
+                        dataLabels: {
+                            enabled: false
+                        },
+                        showInLegend: false
+                    },
+                    series: [{
+                        name: 'Balance $',
+                        data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 222.3, 230.6, 300.4]
+                    }]
+                }
+            }
         }
-    },
-    legend: {
-      enabled: false,
-      },
-    plotOptions: {
-        series: {
-            allowPointSelect: true
-        },
-         dataLabels: {
-                enabled: false
-            },
-            showInLegend: false
-    },
-    series: [{
-         name: '',
-        data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 222.3,230.6, 300.4]
-    }]
-      }
-    }
-  }
     }
 </script>
 
 <style scoped>
-    .highcharts-credits{
+    .highcharts-credits {
         display: none;
     }
-
+    
     .highcharts-yaxis {
-          display: none !important;
-    }
-    .highcharts-legend{
         display: none !important;
     }
-
-    .chart{
-        margin-left:-30px;
+    
+    .highcharts-legend {
+        display: none !important;
+    }
+    
+    .chart {
+        margin-left: -30px;
     }
 </style>

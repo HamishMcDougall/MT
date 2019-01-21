@@ -24,13 +24,11 @@
     align-items: center;
   }
   
-  .navigationMobile {
-    visibility: hidden;
-  }
+
   
   .mainArea {
     display: grid;
-    grid-template-columns: 330px 1fr;
+    grid-template-columns: 330px auto;
   }
   
   .workArea {
@@ -46,4 +44,49 @@
     padding-left: 60px;
     padding-top:30px;
     padding-bottom: 60px;
+  }
+
+  .CardArea {
+    display: flex;
+    align-content: stretch;
+    max-width: 1010px;
+  }
+
+  .phoneText {
+    flex-grow: 1;
+  }
+  
+  .UserEmail {
+    padding-right: 50px;
+  }
+  
+  .myTALtext {
+    flex-grow: 1;
+  }
+  
+  .helpBtn {
+    margin-right: 50px;
+  }
+  
+  .link {
+    font-size: .875rem;
+    font-weight: 500;
+    color: #222;
+    text-decoration: none;
+    border-bottom: 2px solid #80C342;
+    text-transform: uppercase;
+  }
+  
+  .link:hover {
+    border-bottom: 2px solid #80C342;
+    background-color: #80C342;
+  }
+  
+  .LHSNav {
+    padding-left: 60px;
+    padding-top: 30px;
+    background-color: #232d32;
+    color: white;
+    font-size: .9375rem;
+    line-height: 1.33;
   }

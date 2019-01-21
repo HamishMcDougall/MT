@@ -6,7 +6,6 @@
   
     <div class="workArea">
       <div class="workAreaContent">
-        <h1 class="WelcomeText">Welcome LUCAS</h1>
   
 
         <div class="CardArea">
@@ -165,50 +164,26 @@
   }
 </script>
 
-<style>
-  .WelcomeText {
-    color: #232d32;
-  }
-  
-  .TreeNavigation li {
-    padding-left: 20px !important;
-    color: white !important;
-  }
+<style scoped>
+
+
   
   .margin-top-30px {
     padding-top: 30px
   }
   
-  h2 {
-    font-size: 1.125rem;
-    line-height: 1.3333333333;
-  }
-  
-  .pay-now {
-    color: #e50404;
-    font-weight: bold;
-  }
-  
-  .CardArea {
-    display: flex;
-    align-content: stretch;
-  }
-  
+
+
   .MyTALCard {
     background-color: white;
     color: #222;
     padding: 30px;
     margin-top: 30px;
     margin-right: 30px;
-    max-width: 456px;
-    min-width: 256px;
     flex: 1;
   }
   
-  hr {
-    width: 940px;
-    margin-top: 30px;
-  }
+
   
   .MyTALCard-Base {
     background-color: white;
@@ -254,85 +229,6 @@
     padding-right: 20px;
   }
   
-  .phoneText {
-    flex-grow: 1;
-  }
-  
-  .UserEmail {
-    padding-right: 50px;
-  }
-  
-  .myTALtext {
-    flex-grow: 1;
-  }
-  
-  .helpBtn {
-    margin-right: 50px;
-  }
-  
-  .link {
-    font-size: .875rem;
-    font-weight: 500;
-    color: #222;
-    text-decoration: none;
-    border-bottom: 2px solid #80C342;
-    text-transform: uppercase;
-  }
-  
-  .link:hover {
-    border-bottom: 2px solid #80C342;
-    background-color: #80C342;
-  }
-  
-  .LHSNav {
-    padding-left: 60px;
-    padding-top: 30px;
-    background-color: #232d32;
-    color: white;
-    font-size: .9375rem;
-    line-height: 1.33;
-  }
   
   
-  /*
-    @media only screen and (max-width: 1200px) {
-      .Grid {
-        display: grid;
-        grid-template-rows: 0px 0px 62px auto 235px;
-        min-height: 100vh;
-      }
-      .topBar {
-        visibility: hidden;
-      }
-      .navigationDesktop {
-        visibility: hidden;
-      }
-      .navigationMobile {
-        visibility: visible;
-        background-color: rgb(255, 255, 255);
-        border-bottom: 1px solid rgb(232, 232, 232);
-        padding-left: 60px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .myTALtext {
-        flex-grow: 0;
-      }
-      .mainArea {
-        display: grid;
-        grid-template-columns: 0px 1fr;
-      }
-      .workArea {
-        background-image: url(/bg-cliff.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        color: white;
-      }
-      .workAreaContent {
-        max-width: 1100px;
-        padding: 60px;
-      }
-     
-    } */
 </style>

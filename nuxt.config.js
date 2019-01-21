@@ -28,9 +28,7 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '~/css/TALbuttons.css',
-    '~/css/grid.css',
-    '~/scss/TALColors.scss'
+    '~/css/grid.css'
   ],
 
   /*
@@ -51,7 +49,9 @@ module.exports = {
     [
       'nuxt-sass-resources-loader', 
       [
-          'scss/TALColors.scss'
+          'scss/TALColors.scss',
+          'scss/TALButtons.scss',
+          'scss/Text.scss'
       ]
   ]
   ],
