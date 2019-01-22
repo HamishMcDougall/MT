@@ -1,10 +1,10 @@
 <template>
     <div>
-        <div class="example-tree">
-            <tree :data="menuData">
-                <span class="tree-text" slot-scope="{ node }">
+        <div class="example-tree" >
+            <tree :data="menuData" >
+                <span class="tree-text" slot-scope="{ node }" :class='[node.data.class]'>
         <template>
-            <div>
+            <div >
             <a class="Navigation" :href="node.data.link"> 
               <div class="icon-menu">  <img  :src="node.data.icon" alt="" width="18px"> </div>
            <div class="navText" >{{ node.text }}</div> 
@@ -29,6 +29,7 @@
                         text: 'Accelerated Protection',
                         data: {
                             icon: 'Life-white-4.svg',
+                             class: 'topLevel'
                         },
                         state: {
                             expanded: false
@@ -37,14 +38,16 @@
                                 text: '- Accelerated Protection - 1665317',
                                 data: {
                                     icon: '',
-                                    link: 'Testpage'
+                                    link: 'Testpage',
+                                    class: 'subNav'
                                 }
                             },
                             {
                                 text: '- Accelerated Protection - 1666140',
                                 data: {
                                     icon: '',
-                                    link: 'Testpage'
+                                    link: 'Testpage',
+                                     class: 'subNav'
                                 }
                             },
 
@@ -52,7 +55,8 @@
                         text: 'Request a Statement',
                         data: {
                             icon: '',
-                            link: 'Testpage'
+                            link: 'Testpage',
+                            class: 'subNav'
                         }
     
                     },
@@ -60,7 +64,17 @@
                         text: 'Request a Certificate of Currency',
                         data: {
                             icon: '',
-                            link: 'Testpage'
+                            link: 'Testpage',
+                            class: 'subNav'
+                        }
+    
+                    },
+                        {
+                        text: 'Overdue payments',
+                        data: {
+                            icon: '',
+                            link: 'Testpage',
+                            class: 'subNav'
                         }
     
                     },
@@ -69,15 +83,17 @@
                         text: 'Smart Wealth',
                         data: {
                             icon: 'SWealth-white-04.svg',
+                            class:'topLevel'
                         },
                         state: {
                             expanded: false
                         },
                         children: [{
-                                text: '- Smart Wealth - 1665317',
+                                text: '- Sarah School Fund',
                                 data: {
                                     icon: '',
-                                    link: 'bondPolicyDetails'
+                                    link: 'bondPolicyDetails',
+                                    class: 'subNav'
                                 }
                             },
                            
@@ -86,19 +102,13 @@
     
               
                     
-                    {
-                        text: 'Overdue payments',
-                        data: {
-                            icon: '/overdue-payments-0.svg',
-                            link: 'Testpage'
-                        }
-    
-                    },
+                 
                      {
                         text: 'Add Policy / Investment',
                         data: {
                             icon: '/add-policy-0.svg',
-                            link: 'Testpage'
+                            link: 'Testpage',
+                            class: 'Utility , Utility-top'
                         }
     
                     },
@@ -108,7 +118,8 @@
                         text: 'Change Password',
                         data: {
                             icon: '/change-password-0.svg',
-                            link: 'Testpage'
+                            link: 'Testpage',
+                            class: 'Utility'
                         }
     
                     },
@@ -169,7 +180,6 @@
     }
     
     .tree-children .tree-node .tree-content .tree-anchor {
-        border-bottom: 1px solid transparent !important;
         margin-left: -50px !important;
       
     }
@@ -178,7 +188,9 @@
     .tree-children  .tree-node {
        background-color: #35434b !important;
        margin-left:33px !important;
-       margin-top:-3px !important;
+       margin-top:-6px !important;
+       padding-top:10px;
+       width:220px !important;
     }
 
     .tree > .tree-root{
@@ -186,12 +198,11 @@
     }
     
     .tree-root .tree-node .tree-content .tree-anchor {
-        border-bottom: 1px solid  #35434b !important;
-        padding-top: 10px !important;
-        padding-bottom: 10px !important;
-        white-space: normal !important;
+      
     }
     
+
+
     .tree-node {
         white-space: normal !important;
     }
@@ -243,4 +254,28 @@
         opacity: 0 !important;
         transform: translateY(-0.1em) !important;
     }
+
+    .topLevel{
+        border-bottom: 1px solid  #35434b !important;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        white-space: normal !important;
+        width:220px;
+    }
+
+    .Utility-top {
+        margin-top:30px;
+    }
+
+    .Utility{
+        margin-left: -25px;
+    }
+
+    .subNav{
+       width:220px;
+        padding-bottom: 10px;
+    }
+
+   
+  
 </style>

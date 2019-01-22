@@ -20,7 +20,8 @@
     "highcharts-vue": "^1.2.0",
     "liquor-tree": "^0.2.49",
     "nuxt": "^2.0.0",
-    "nuxt-sass-resources-loader": "^2.0.5"
+    "nuxt-sass-resources-loader": "^2.0.5",
+    "vue-rangedate-picker": "^1.0.0"
   },
   "devDependencies": {
     "node-sass": "^4.11.0",

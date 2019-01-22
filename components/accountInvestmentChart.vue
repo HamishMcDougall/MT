@@ -56,13 +56,13 @@ plotOptions: {
         name: 'Brands',
         colorByPoint: true,
         data: [{
-            name: 'Balanced',
+            name: 'Vanguard balanced',
             y: 61.41,
         }, {
-            name: 'Shares',
+            name: 'Dimensional Aus Core Imputation',
             y: 11.84
         }, {
-            name: 'Interest',
+            name: 'Janus Henderson Cash',
             y: 10.85
         }]
     }]
