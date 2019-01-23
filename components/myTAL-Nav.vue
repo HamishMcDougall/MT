@@ -106,7 +106,7 @@
                      {
                         text: 'Add Policy / Investment',
                         data: {
-                            icon: '/add-policy-0.svg',
+                            icon: '',
                             link: 'Testpage',
                             class: 'Utility , Utility-top'
                         }
@@ -117,7 +117,7 @@
                     {
                         text: 'Change Password',
                         data: {
-                            icon: '/change-password-0.svg',
+                            icon: '',
                             link: 'Testpage',
                             class: 'Utility'
                         }

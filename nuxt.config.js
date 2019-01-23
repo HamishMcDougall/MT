@@ -35,9 +35,10 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: '~plugins/vue-rangedate-picker', ssr: false },
     { src: '~plugins/Liquor-tree', ssr: false },
     { src: '~plugins/highcharts-vue', ssr: false},
-    { src: '~plugins/vue-rangedate-picker', ssr: false } 
+   
   ],
 
   /*
@@ -74,9 +75,9 @@ module.exports = {
     }
 
   },
-  /* 
+ /* Set for serving from another directory
   router: {
     base: '/BondNew/dist/'
   }
-  */
+*/
 }

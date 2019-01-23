@@ -30,10 +30,12 @@
                         <div class="MyTALPolicyCard">
     
                             <div class="topDetails">
+                                <no-ssr>
                                 <div class="dateSelector">
                                     <div class="Balance">Date Range:</div>
                                     <VueRangedatePicker :captions=captions i18n="EN"></VueRangedatePicker>
                                 </div>
+                                </no-ssr>
     
                                 <div class="">
     
@@ -93,24 +95,24 @@
                             <div class="leftDetails">
                                 <h2>Account Details</h2>
                                 <div v-for="(policyDetails, policyDetailsLabel) in CardData.policyDetails">
-                                    <div class="contactDataArea">
+                                    <div class="personalDataArea">
                                         <div>
                                             <div class="contactLabelText">{{policyDetailsLabel}}:</div>
                                             <div>{{policyDetails}} </div>
                                         </div>
-                                        <div><a class="editLink" href="#">Edit</a></div>
+                               
                                     </div>
                                 </div>
                             </div>
                             <div class="rightDetails">
-                                     <h2>Account Details</h2>
+                
                                 <div v-for="(policyDetails2, policyDetailsLabel2) in CardData.policyDetails2">
-                                    <div class="contactDataArea">
+                                    <div class="personalDataArea">
                                         <div>
                                             <div class="contactLabelText">{{policyDetailsLabel2}}:</div>
                                             <div>{{policyDetails2}} </div>
                                         </div>
-                                        <div><a class="editLink" href="#">Edit</a></div>
+                                
                                     </div>
                                 </div>
                             </div>
@@ -253,13 +255,13 @@
         background-color: $Primary-LightGreen !important;
     }
     
-    .right {
-        filter: hue-rotate(200deg) saturate(3);
+    .months-text .right {
+        filter: hue-rotate(290deg) saturate(3);
         background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNv…c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=);
     }
     
-    .left {
-        filter: hue-rotate(200deg) saturate(3);
+    .months-text .left {
+        filter: hue-rotate(290deg) saturate(3);
     }
     .calendar_days_selected{
             background-color: $Primary-LightGreen !important;
@@ -271,7 +273,7 @@
     .active-preset {
     border: 1px solid $Primary-LightGreen !important;;
     color: $Primary-LightGreen !important;;
-    border-radius: 3px !important;;
+    border-radius: 3px !important;
     }
 </style>
 
@@ -325,6 +327,13 @@
         padding: 15px;
     }
     
+    .personalDataArea{
+        display: flex;
+        justify-content: space-between;
+        font-size: .875rem;
+        padding-top: 15px;
+    }
+
     .contactDataArea:hover {
         background-color: rgb(247, 247, 247);
         padding: 15px;

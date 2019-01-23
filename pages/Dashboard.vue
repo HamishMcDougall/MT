@@ -71,15 +71,17 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="workAreaContent">
-        <div class="MyTALCard">
+   
+
+        <div class="MyTALCard square">
           <h2>Can't find all your TAL products</h2>
           <p class="ActionText margin-top-30px">Click the add button to get started.
             <br> If you don't have your policy or investment number on hand please call 1300 209 088.</p>
           <div class="margin-top-30px"></div>
           <a href="#" class="btn-primary ">Add </a>
-        </div>
+   </div>
+
+
       </div>
     </div>
   </div>
@@ -139,7 +141,7 @@
             Type: "Sarah School fund",
             policyData: {
               "Account Number": 332323223,
-              "Ballance": "$32,454.45",
+              "Balance": "$32,454.45",
               "Goal": "Education Savings",
               "Goal Amount" : "$1,243,3434.33",
               "Account Owner" : "Mr James Smith",
@@ -174,20 +176,7 @@
   .margin-top-30px {
     padding-top: 30px
   }
-  
-  .MyTALCard {
-    background-color: white;
-    color: #222;
-    flex: 1;
-    padding: 30px;
-    margin-top: 30px;
-    margin-right: 30px;
-    min-width: 520px;
-  }
-  
-  .square {
-    max-width: 520px;
-  }
+
   
   .policyDataArea {
     display: flex;
@@ -215,7 +204,6 @@
   
   .ActionTextArea {
     display: flex;
-    justify-content: space-around;
     align-items: center;
   }
   
@@ -226,5 +214,37 @@
   }
 
 
+    
+  .MyTALCard {
+    background-color: white;
+    color: #222;
+    flex: 1;
+    padding: 30px;
+    margin-top: 30px;
+    margin-right: 30px;
+    min-width: 500px;
+  }
+@media only screen and (min-width: 1490px) {
+  .square {
+
+  }
+}
+
+@media only screen and (max-width: 1490px) {
+    
+  .MyTALCard {
+    background-color: white;
+    color: #222;
+    flex: 1;
+    padding: 30px;
+    margin-top: 30px;
+    margin-right: 30px;
+
+  }
+  
+  .square {
+    width:100%
+  }
+}
 
 </style>
